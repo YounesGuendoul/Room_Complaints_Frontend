@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>
+      Espace Etudiant
+    </title>
+    <link rel="stylesheet" href="etudiant.css">
+    <link rel="shortcut icon" type="x-icon" href="image/icons8-home-kmg-design-outline-color-96.png">
+  </head>
+  <body>
+    <div class="container">
+        <div class="navbar">
+          <img src="image/Capture1-removebg-preview.png" class="logo">
+          <img src="image/icons8-technology-96.png" class="register">
+          <nav>
+            <ul>
+              <li><a href="home.html" class="no">Home</a></li>
+              <li><a class="ui">S'inscrire</a></li>
+            </ul>
+          </nav>
+          <img src="image/icons8-plan-96.png" class="plan">
+        </div>
+        <section>
+        <div class="sec-container">
+          <div class="form-wrapper">
+            <div class="card">
+              <div class="card-header">
+                <div id="forLogin" class="form-header active">Se connecter</div>
+              </div>
+              <div class="card-body" id="formContainer">
+                <form id="formLogin">
+                  <input type="text" class="form-control" placeholder="@utilisateur" required/>
+                  <input type="password" class="form-control" placeholder="@Mot de passe" required/>
+                  <button class="formButton" onclick="window.location.href='file:fomulaire.html';">Connexion</button> 
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>       
+    </div>   
+    <script>
+      const displayForm= _('displayForm');
+      const forlogin= _('forLogin');
+      const loginForm= _('loginForm');
+      const forRegister= _('registerForm');
+      const registerForm= _('registerForm');
+      const formContainer= _('formContainer');
+      displayForm.addEventListener('click',showForm);
+      function _(e){
+        return document.getElementById(e);
+      }
+      function showForm(){
+        document.querySelector('.form_wrapperb .card').classList.toggle('show');
+      }
+    </script>
+  </body>
+
+</html>
